@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import '../src/styles/app.css'
+import { Routes, Route } from 'react-router-dom';
+import { routes } from './store/Routes';
+import CustomHeader from './components/CustomHeader';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomHeader/>
+      <Routes>
+        {
+          routes.map(({ path, element }) => <Route key={path} path={path} element={element} exact />)
+        }
+      </Routes>
     </div>
   );
 }

@@ -1,4 +1,36 @@
+:root {
+  --body-background-color: azure;
+  --body-color: black;
+  --body-scrollbar-background: #c1c1c1;
+  --body-scrollbar-background-color: #f1f1f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background-color: #444444;
+    --body-color: #f6fae8;
+    --body-scrollbar-background: #585858;
+    --body-scrollbar-background-color: #686868;
+  }
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--body-scrollbar-background);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--body-scrollbar-background-color);
+    border-radius: 20px;
+    border: 3px solid var(--body-scrollbar-background-color);
+}
+
 body {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

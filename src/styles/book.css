@@ -1,0 +1,112 @@
+:root {
+    --card-background: #f3f2f1;
+    --card-ps-text-color: lightgray;
+    --card-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-background: #9c9c9c;
+        --card-color: #f6fae8;
+    }
+}
+
+.list {
+    padding: 20px;
+}
+
+.books-count {
+    font-size: 25px;
+    text-align: center;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 278px;
+    background-color: var(--card-background);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: var(--card-color);
+}
+
+.book-image {
+    box-shadow: 11px 11px 5px rgba(0,0,0,0.6);
+}
+
+.book-params {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 900px;
+}
+
+.book-category {
+    font-size: 16px;
+    color: var(--card-ps-text-color);
+    text-decoration: underline;
+}
+
+.book-name {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--card-color);
+}
+
+.book-authors {
+    font-size: 18px;
+    color: var(--card-ps-text-color);
+}
+
+.load-more {
+    display: flex;
+    justify-content: center;
+}
+
+.book-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1400px) {
+    .book-params {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .book-params {
+        max-width: 300px;
+    }
+}

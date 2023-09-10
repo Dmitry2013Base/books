@@ -1,0 +1,26 @@
+:root {
+    --button-border-color: black;
+    --button-background-color: wheat;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --button-border-color: white;
+        --button-background-color: #919191;
+    }
+}
+
+.button-base {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 3px 7px;
+    border: 1px solid var(--button-border-color);
+    color: var(--button-border-color);
+    font-size: 18px;
+}
+
+.button-base:hover {
+    cursor: pointer;
+    background-color: var(--button-background-color);
+}
